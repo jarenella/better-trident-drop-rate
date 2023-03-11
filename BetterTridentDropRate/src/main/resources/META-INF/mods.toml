@@ -1,0 +1,58 @@
+
+modLoader="javafml"
+
+loaderVersion="[44,)"
+
+# The license for the mod.
+license="MIT"
+
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+
+# The modid of the mod
+modId="better_trident_drop_rate" #mandatory
+
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+version="${file.jarVersion}" #mandatory
+
+# A display name for the mod
+displayName="Better Trident Drop Rate" #mandatory
+
+logoFile="examplemod.png" #optional
+
+# A text field displayed in the mod UI
+credits="Special thanks for this mod goes to Cy4 for his tutorial" #optional
+
+# A text field displayed in the mod UI
+authors="coffeebeen" #optional
+
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+In Minecraft Java Edition, the droprate for the trident is obscenely lower than it is in bedrock edition for no real discernable reason.
+Not only that, but fewer mobs drop it, as only the drowned who spawn with tridents will actually drop one.
+This contrasts with Bedrock Edition's way of doing it where all drowned have a chance to drop it. To me, there is no logical reason for this.
+The trident, while good, is no where near as powerful as, say a netherite sword, but is, in my opinion, significantly more difficult to obtain.
+This mod seeks to fix that. It is extremely simple, and only tweaks the drop rate numbers of tridents, as well as the mobs who can drop them.
+With this mod, all drowneds now have a chance to drop a trident, and it is slightly higher than it is in the base game of Java Edition.
+'''
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.better_trident_drop_rate]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[44,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.better_trident_drop_rate]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.19.3,1.20)"
+    ordering="NONE"
+    side="BOTH"
